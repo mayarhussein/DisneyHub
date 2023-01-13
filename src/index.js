@@ -7,10 +7,13 @@ import reducers from './reducers';
 
 import App from './App';
 
+
+// Redux -> State Management
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 ReactDom.render(
     <Provider store={store}>
        <App/>
      </Provider>, 
-     document.getElementById('root'));
+     document.getElementById('root')
+     );
